@@ -448,10 +448,16 @@ img { max-width: 100%; display: block; }
   padding: .12rem .45rem; border-radius: 5px; margin-left: .5rem; vertical-align: .14em;
   background: var(--bg-sunken); color: var(--text-faint); border: 1px solid var(--line);
 }
+.badge + .badge { margin-left: .35rem; }
 .badge[data-tone="expired"] {
   color: #b4532a;
   border-color: color-mix(in srgb, #b4532a 30%, transparent);
   background: color-mix(in srgb, #b4532a 10%, transparent);
+}
+.badge[data-tone="progress"] {
+  color: var(--accent-text);
+  border-color: color-mix(in srgb, var(--accent) 35%, transparent);
+  background: var(--accent-soft);
 }
 
 /* ---------- contact ---------- */
