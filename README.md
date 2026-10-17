@@ -58,7 +58,6 @@ branch `main`, folder `/ (root)`. First publish takes a minute or two.
 
 ## TODO
 
-- [ ] Add a LinkedIn URL — placeholder comment is in the hero `.cta-row` in `index.html`
 - [ ] Swap the `LM` monogram favicon for a real one if you want something less generic
 - [ ] Add a photo to the hero (optional — `assets/img/` exists for it)
 - [ ] Ansible Flex is the featured project — refresh its capability list as the app grows
