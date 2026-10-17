@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Résumé — Louis Mancone IV</title>
+<meta name="description" content="Résumé of Louis Mancone IV — network engineer specializing in IP/MPLS, Metro Ethernet, enterprise services, and network automation.">
+<meta name="author" content="Louis Mancone IV">
+<link rel="canonical" href="https://louie1214.github.io/resume.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d7f72'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='15' font-weight='700' fill='%23fff' text-anchor='middle'%3ELM%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+
+<style>
+  .resume { --maxw: 860px; }
+  .resume .wrap { max-width: 860px; }
+
+  .cv-header { padding-block: clamp(2rem, 6vw, 3.25rem) 1.5rem; }
+  .cv-header h1 { font-size: var(--step-3); letter-spacing: -.035em; }
+  .cv-header .cv-title { font-size: var(--step-1); color: var(--text-muted); margin-top: .35rem; font-weight: 500; }
+  .cv-contact {
+    display: flex; flex-wrap: wrap; gap: .3rem 1.1rem;
+    margin-top: .9rem; font-size: var(--step--1); color: var(--text-muted);
+  }
+  .cv-contact a { color: var(--text-muted); }
+  .cv-contact a:hover { color: var(--accent-text); }
+  .cv-contact li::after { content: " \00B7"; color: var(--text-faint); }
+  .cv-contact li:last-child::after { content: ""; }
+  .cv-contact { list-style: none; }
+
+  .cv-section { padding-block: 1.75rem; border-top: 1px solid var(--line); }
+  .cv-section > h2 {
+    font-size: var(--step--1); text-transform: uppercase; letter-spacing: .12em;
+    color: var(--accent-text); font-weight: 600; margin-bottom: 1.1rem;
+  }
+
+  .cv-entry { margin-bottom: 1.6rem; }
+  .cv-entry:last-child { margin-bottom: 0; }
+  .cv-entry-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: .15rem .7rem; }
+  .cv-entry-head h3 { font-size: var(--step-0); font-weight: 650; }
+  .cv-entry-head .cv-where { color: var(--text-muted); font-size: var(--step--1); }
+  .cv-entry-head .cv-when {
+    margin-left: auto; color: var(--text-faint);
+    font-family: var(--font-mono); font-size: .78rem; white-space: nowrap;
+  }
+  @media (max-width: 620px) { .cv-entry-head .cv-when { margin-left: 0; } }
+
+  .cv-roles { margin: .45rem 0 .7rem; display: grid; gap: .15rem; }
+  .cv-roles li {
+    display: flex; gap: .7rem; flex-wrap: wrap;
+    font-size: var(--step--1); font-weight: 550;
+  }
+  .cv-roles li span {
+    margin-left: auto; color: var(--text-faint);
+    font-family: var(--font-mono); font-size: .78rem; font-weight: 400; white-space: nowrap;
+  }
+
+  .cv-list { display: grid; gap: .45rem; color: var(--text-muted); font-size: var(--step--1); }
+  .cv-list li { display: flex; gap: .65rem; }
+  .cv-list li::before {
+    content: ""; width: .28rem; height: .28rem; border-radius: 50%;
+    background: var(--line-strong); flex: none; margin-top: .66em;
+  }
+
+  .cv-note {
+    margin-top: .7rem; font-size: var(--step--1); color: var(--text-muted);
+    padding-left: .9rem; border-left: 2px solid var(--line-strong);
+  }
+  .cv-note b { color: var(--text); font-weight: 600; }
+
+  .cv-skill-row {
+    display: grid; grid-template-columns: 11rem minmax(0, 1fr);
+    gap: .4rem 1.25rem; padding-block: .55rem;
+    border-bottom: 1px dashed var(--line);
+    font-size: var(--step--1);
+  }
+  .cv-skill-row:last-child { border-bottom: none; }
+  .cv-skill-row dt { color: var(--text-faint); font-weight: 600; }
+  .cv-skill-row dd { margin: 0; color: var(--text-muted); }
+  @media (max-width: 620px) { .cv-skill-row { grid-template-columns: 1fr; gap: .1rem; } }
+
+  @media print {
+    .cv-header { padding-block: 0 .6rem; }
+    .cv-section { padding-block: .7rem; }
+    .cv-entry { margin-bottom: .85rem; break-inside: avoid; }
+    .cv-section > h2 { margin-bottom: .55rem; }
+  }
+</style>
+
+<script>
+  try {
+    var t = localStorage.getItem('theme');
+    if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+</script>
+</head>
+<body class="resume">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">LM</span> <span class="brand-name">Louis Mancone IV</span></a>
+    <nav class="nav-links" aria-label="Site navigation">
+      <a href="index.html">&larr; Profile</a>
+      <a href="#" id="printBtn">Print / PDF</a>
+      <a href="assets/Louis-Mancone-IV-Resume.docx" class="nav-hide-sm">.docx</a>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+  <div class="cv-header">
+    <h1>Louis Mancone IV</h1>
+    <p class="cv-title">Communication / Network Engineer III &mdash; IP/MPLS, Metro Ethernet &amp; Network Automation</p>
+    <ul class="cv-contact">
+      <li>Smithfield, RI</li>
+      <li><a href="mailto:lmanconeiv@gmail.com">lmanconeiv@gmail.com</a></li>
+      <li><a href="https://github.com/louie1214">github.com/louie1214</a></li>
+      <li><a href="https://louie1214.github.io/">louie1214.github.io</a></li>
+    </ul>
+  </div>
+
+  <!-- SUMMARY -->
+  <section class="cv-section">
+    <h2>Professional summary</h2>
+    <p style="color: var(--text-muted); font-size: var(--step--1);">
+      Lead-level Network Engineer with 10+ years designing, implementing, testing, and supporting
+      large-scale IP/MPLS, Internet, Metro Ethernet, and enterprise network services. Experienced in
+      network automation, golden configuration deployment, lab validation, production rollout risk
+      assessment, configuration compliance, and cross-functional engineering support. Strong background
+      developing technical standards, MOPs, test plans, and operational handoffs for high-availability
+      commercial networks.
+    </p>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="cv-section">
+    <h2>Work experience</h2>
+
+    <article class="cv-entry">
+      <div class="cv-entry-head">
+        <h3>Cox Communications</h3>
+        <span class="cv-where">Cox Business Sustaining Engineering &mdash; Atlanta, GA (Remote)</span>
+      </div>
+      <ul class="cv-roles">
+        <li>Communication / Network Engineer III <span>Nov 2023 &ndash; Present</span></li>
+      </ul>
+      <ul class="cv-list">
+        <li>Develop high- and low-level network designs, standardized test plans, lab regression testing, field trials, and FOA introductions for commercial Internet, Metro Ethernet, L3VPN, VPLS, and advanced enterprise services, ensuring validated solutions transition cleanly into production operations.</li>
+        <li>Design and implement network automation for golden configuration deployment and standardized network changes, improving consistency, reducing manual effort, and supporting repeatable provisioning across the commercial network.</li>
+        <li>Identify opportunities to improve existing designs and practices by evaluating new platform capabilities, industry standards, and market demand; define business impact, prioritize initiatives, and align resources for proof-of-concept testing.</li>
+        <li>Lead introduction of validated design improvements into Cox's commercial services network operations.</li>
+        <li>Assess risk to rollout plans and advise business partners on impacts and options, including workarounds, schedule changes, and modified product scope.</li>
+        <li>Serve as subject matter expert on network technology and market requirements for Metro Ethernet and advanced commercial/enterprise services, including L3VPN, VPLS, Internet, Ethernet Private Line, QoS, and SLAs.</li>
+      </ul>
+    </article>
+
+    <article class="cv-entry">
+      <div class="cv-entry-head">
+        <h3>Cox Communications</h3>
+        <span class="cv-where">Cox Business Operations Engineering &mdash; West Warwick, RI</span>
+      </div>
+      <ul class="cv-roles">
+        <li>Communication / Network Engineer II <span>Apr 2020 &ndash; Nov 2023</span></li>
+        <li>Communication / Network Engineer I <span>Apr 2018 &ndash; Apr 2020</span></li>
+      </ul>
+      <ul class="cv-list">
+        <li>Designed, planned, and implemented large-scale IP/MPLS core network projects across the Northeast region, supporting production routing infrastructure on Nokia 7750 SR, SR-s, and 7950 XRS platforms for commercial and enterprise services.</li>
+        <li>Planned and executed network configuration compliance activities in coordination with other Cox regions to ensure company standards were met.</li>
+        <li>Served as subject matter expert and escalation point for Design Engineering and Service Assurance teams.</li>
+        <li>Led cross-functional change reviews with operational partners and produced detailed methods of procedure covering implementation steps, validation approach, risk considerations, and operational handoff.</li>
+        <li>Partnered with Sustaining Design Engineering and local engineers to test and validate functionality, management, and performance of new and existing technologies.</li>
+        <li>Prepared and delivered technical documentation, engineering work packages, and presentations.</li>
+      </ul>
+      <p class="cv-note">
+        <b>Additional:</b> National CB Solutioning and Automation team member developing tools, scripts, and
+        playbooks for CB Operations enterprise-wide &middot; Contributor to national engineering automation
+        initiative leveraging Ansible &middot; 2019 Cox Gold Standard Award recipient &middot; BluePlanet
+        training team member, developing materials and leading training sessions.
+      </p>
+    </article>
+
+    <article class="cv-entry">
+      <div class="cv-entry-head">
+        <h3>Cox Communications</h3>
+        <span class="cv-where">Cox Business Access Engineering &mdash; West Warwick, RI</span>
+      </div>
+      <ul class="cv-roles">
+        <li>CB Access Engineer I <span>Feb 2017 &ndash; Apr 2018</span></li>
+      </ul>
+      <ul class="cv-list">
+        <li>Designed, planned, and implemented projects delivering services from DS-0 through DWDM, including Native Ethernet and IP services over fiber optic and coaxial cable.</li>
+        <li>Provided full engineering support for the 2017 RI Department of Education project, spanning 148 customer orders including bandwidth upgrades, new installs, and transport win-backs.</li>
+      </ul>
+    </article>
+
+    <article class="cv-entry">
+      <div class="cv-entry-head">
+        <h3>Cox Communications</h3>
+        <span class="cv-where">Enterprise Customer Support Center &mdash; West Warwick, RI</span>
+      </div>
+      <ul class="cv-roles">
+        <li>Enterprise Customer Support Specialist <span>Aug 2012 &ndash; Feb 2017</span></li>
+      </ul>
+      <ul class="cv-list">
+        <li>Owned support and triage for wholesale carrier customers and strategic, high-profile business accounts.</li>
+        <li>Delivered Tier 2 support for Cox Business IP Centrex customers across Metro Ethernet, TDM, SONET, Optical Internet, VoIP, HFC telephony, video, and data.</li>
+        <li>Monitored service alarms for critical first-responder (police and fire) accounts.</li>
+        <li>Proactively notified wholesale carrier customers of Cox change management activities.</li>
+        <li>Supported wholesale carrier ASR requests, providing order status and details via the VFO portal, Granite Work Orders, and Optix Projects/CIRs.</li>
+      </ul>
+      <p class="cv-note">
+        <b>Additional:</b> Process and documentation development &middot; Departmental training design and
+        facilitation, including new-hire classroom instruction as SME &middot; 2012 New England Vision Awards
+        Finalist (Rising Star) &middot; Traveled to Las Vegas to help launch and train new hires at a new location.
+      </p>
+    </article>
+
+    <article class="cv-entry">
+      <div class="cv-entry-head">
+        <h3>Cox Communications</h3>
+        <span class="cv-where">National Support Center &mdash; West Warwick, RI</span>
+      </div>
+      <ul class="cv-roles">
+        <li>Commercial Customer Support Rep. II <span>Jul 2010 &ndash; Aug 2012</span></li>
+      </ul>
+      <ul class="cv-list">
+        <li>Provided technical support for HFC telephony, data, and video, plus web hosting, DNS, email, and hospitality network Wi-Fi.</li>
+      </ul>
+      <p class="cv-note">
+        <b>Additional:</b> Consulted on the Cox Business VoiceManager/MyAccount redesign initiative &middot;
+        Member of a departmental Tier 2 pilot program &middot; New-hire training as SME.
+      </p>
+    </article>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="cv-section">
+    <h2>Technical skills</h2>
+    <dl>
+      <div class="cv-skill-row">
+        <dt>Platforms</dt>
+        <dd>Nokia SROS &mdash; 7750 SR/SR-s, 7950 XRS, 7250 IXR, 7210 SAS-M/MXP/Sx/K, 7705 SAR-8/M; Cisco ISR series; Cisco ASR series; Cisco ASA firewalls; FortiGate firewalls; Cisco/Accedian NIDs; Cisco ISE</dd>
+      </div>
+      <div class="cv-skill-row">
+        <dt>Services &amp; protocols</dt>
+        <dd>IP/MPLS, L3VPN/VPRN, VPLS, EPIPE, CPIPE, Metro Ethernet, Ethernet Private Line, QoS, SLAs, BGP, IS-IS, OSPF</dd>
+      </div>
+      <div class="cv-skill-row">
+        <dt>Management &amp; automation</dt>
+        <dd>Nokia NSP/NFM-P; automation and network change management via Ansible and Python; Git, Jira, Agile development</dd>
+      </div>
+      <div class="cv-skill-row">
+        <dt>Legacy &amp; access</dt>
+        <dd>HFC telephony, data, and video; DS-0 through DWDM access technologies</dd>
+      </div>
+      <div class="cv-skill-row">
+        <dt>Practice</dt>
+        <dd>Network change management, methods of procedure, lab regression testing, FOA / field trials, documentation, cross-functional escalation, vendor / carrier coordination</dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="cv-section">
+    <h2>Certifications</h2>
+    <ul class="cv-list">
+      <li>Nokia Network Routing Specialist I &mdash; Certification ID 9555 (September 2018 &ndash; October 2024)</li>
+      <li>Cisco Certified Network Associate &mdash; License CSCO11723512 (Expired; February 2010 &ndash; February 2019)</li>
+    </ul>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="cv-section">
+    <h2>Education</h2>
+    <article class="cv-entry">
+      <div class="cv-entry-head">
+        <h3>Associate in Applied Science, Networking and Computer Technology</h3>
+        <span class="cv-when">Sep 2008 &ndash; May 2010</span>
+      </div>
+      <p class="cv-where" style="color: var(--text-muted); font-size: var(--step--1);">
+        Community College of Rhode Island, Warwick, RI &mdash; Network Technician focus &middot; GPA 3.93/4.00
+      </p>
+      <ul class="cv-list" style="margin-top:.5rem">
+        <li>CCRI Governance Committee &mdash; Technology Council student representative: served as the student voice in developing, reviewing, and evaluating the college's technology strategic plan and policies.</li>
+      </ul>
+    </article>
+  </section>
+
+  <div class="cta-row no-print" style="padding-bottom: 3rem;">
+    <button class="btn btn-primary" type="button" id="printBtn2">Print / save as PDF</button>
+    <a class="btn" href="assets/Louis-Mancone-IV-Resume.docx">Download .docx</a>
+    <a class="btn" href="index.html">Back to profile</a>
+  </div>
+
+</main>
+
+<footer class="site-footer no-print">
+  <div class="wrap footer-row">
+    <span>&copy; <span id="year">2026</span> Louis Mancone IV</span>
+    <nav aria-label="Footer">
+      <a href="index.html">Profile</a>
+      <a href="https://github.com/louie1214">GitHub</a>
+      <a href="mailto:lmanconeiv@gmail.com">Email</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+<script>
+  ['printBtn', 'printBtn2'].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) {
+      el.addEventListener('click', function (e) { e.preventDefault(); window.print(); });
+    }
+  });
+</script>
+</body>
+</html>
