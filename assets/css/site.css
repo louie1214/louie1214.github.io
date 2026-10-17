@@ -391,6 +391,48 @@ img { max-width: 100%; display: block; }
 .project p { color: var(--text-muted); font-size: var(--step--1); flex: 1; }
 .project-link { font-size: var(--step--1); font-weight: 600; display: inline-flex; align-items: center; gap: .35rem; }
 
+/* the lead project gets the full row and a capability column */
+.project-feature {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: start;
+  padding: clamp(1.4rem, 3vw, 1.9rem);
+  border-color: color-mix(in srgb, var(--accent) 32%, var(--line));
+}
+@media (max-width: 800px) { .project-feature { grid-template-columns: 1fr; } }
+
+.project-feature > div { display: flex; flex-direction: column; gap: .75rem; }
+.project-feature h3 { font-size: var(--step-1); }
+.project-feature p { flex: 0; }
+
+.project-flag {
+  align-self: flex-start;
+  font-family: var(--font-mono); font-size: .7rem;
+  letter-spacing: .09em; text-transform: uppercase;
+  color: var(--accent-text); background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, transparent);
+  padding: .18rem .6rem; border-radius: 999px;
+}
+
+.capability-head {
+  font-size: var(--step--1); text-transform: uppercase; letter-spacing: .07em;
+  color: var(--text-faint); font-weight: 600; margin-bottom: .2rem;
+}
+.capabilities { display: grid; gap: .5rem; }
+/* these items mix a bold label with running text, so the marker is positioned
+   rather than made a flex sibling — otherwise the label wraps as its own column */
+.capabilities li {
+  position: relative; padding-left: 1.1rem;
+  font-size: var(--step--1); color: var(--text-muted);
+}
+.capabilities li::before {
+  content: "\25B8"; position: absolute; left: 0; top: 0;
+  color: var(--accent);
+}
+.capabilities b { color: var(--text); font-weight: 600; }
+
 /* ---------- credentials ---------- */
 
 .cred-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }

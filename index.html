@@ -341,6 +341,22 @@
       </div>
 
       <div class="skill-card reveal">
+        <h3>Software &amp; tooling</h3>
+        <div class="tags">
+          <span class="tag" data-strong="true">Python</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">SQLAlchemy</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">React</span>
+          <span class="tag">Electron</span>
+          <span class="tag">SQLite</span>
+          <span class="tag">Tailwind</span>
+          <span class="tag">Vite</span>
+          <span class="tag">Containerlab</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
         <h3>Engineering practice</h3>
         <div class="tags">
           <span class="tag" data-strong="true">High / low-level design</span>
@@ -377,51 +393,77 @@
     <div class="section-head">
       <span class="section-kicker">04</span>
       <h2>Projects</h2>
-      <span class="section-note">Things I build outside the day job</span>
+      <span class="section-note">Tooling I build for the work I do</span>
     </div>
 
     <div class="project-grid">
 
-      <article class="project reveal">
-        <h3>MySEQ</h3>
-        <p>
-          Maintenance and modernization of a two-process map/overlay tool: a native memory reader
-          paired with a .NET client. Includes an offset-discovery pipeline that re-derives struct
-          offsets automatically after a client patch, replacing a manual reverse-engineering pass.
-        </p>
-        <div class="tags">
-          <span class="tag">C++</span><span class="tag">C#</span><span class="tag">.NET</span><span class="tag">Python</span>
+      <article class="project project-feature reveal">
+        <div>
+          <span class="project-flag">Featured</span>
+          <h3>Ansible Flex</h3>
+          <p>
+            A local web UI for running and managing Ansible playbooks &mdash; the operator-facing
+            front end I wanted for network automation work. Pick a playbook and inventory from a
+            managed Git-backed source, run it with live streaming output, and keep a filterable
+            history of every run with task-level results and one-click re-run.
+          </p>
+          <p>
+            It reaches real infrastructure the way engineers actually have to: SSH SOCKS5 tunnels
+            through a jump host with MFA support, credentials held in the OS keychain rather than a
+            database, and an in-browser SSH terminal that can target a device by hostname or straight
+            out of an Ansible inventory. Everything runs on localhost; nothing leaves the machine.
+          </p>
+          <div class="tags">
+            <span class="tag" data-strong="true">Python</span>
+            <span class="tag" data-strong="true">FastAPI</span>
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">SQLAlchemy</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">Ansible</span>
+            <span class="tag">Containerlab</span>
+          </div>
+          <a class="project-link" href="https://github.com/louie1214/ansible-flex">github.com/louie1214/ansible-flex &rarr;</a>
+        </div>
+
+        <div>
+          <p class="capability-head">What it does</p>
+          <ul class="capabilities">
+            <li><b>Playbook runner</b> &mdash; live streaming output, task-level results, re-run from history</li>
+            <li><b>Sources</b> &mdash; local and Git-backed playbook/inventory repos with sync</li>
+            <li><b>Credentials</b> &mdash; SSH keys, passwords, and tokens in the OS keychain, never the DB</li>
+            <li><b>SOCKS tunnel</b> &mdash; SSH jump-host proxying with MFA, reusable as named profiles</li>
+            <li><b>Containerlab</b> &mdash; build and deploy Nokia SR-OS topologies, then generate inventory from the running nodes</li>
+            <li><b>FlexParse</b> &mdash; structured extraction via TTP, TextFSM, or JMESPath, with template generation</li>
+            <li><b>Environments</b> &mdash; managed Python venvs with pip packages and Galaxy collections</li>
+          </ul>
         </div>
       </article>
 
       <article class="project reveal">
-        <h3>EQ Flex</h3>
+        <h3>EngWorks</h3>
         <p>
-          Desktop log parser and damage meter with a real-time trigger engine &mdash; tail-and-parse
-          pipeline, embedded document store, and single-file auto-updating distribution.
+          Local-first desktop app for tracking engineering projects &mdash; tasks, notes, and
+          documents per project, built to replace an ad-hoc OneNote workflow. SQLite lives entirely
+          in the Electron main process; the renderer reaches it only through a typed, allow-listed
+          IPC bridge with context isolation on. Every table carries UUID keys and soft-delete markers
+          so a sync layer can land later without a schema rewrite.
         </p>
         <div class="tags">
-          <span class="tag">.NET 10</span><span class="tag">WPF</span><span class="tag">LiteDB</span><span class="tag">Velopack</span>
+          <span class="tag">Electron</span><span class="tag">TypeScript</span><span class="tag">React</span>
+          <span class="tag">SQLite</span><span class="tag">Drizzle ORM</span><span class="tag">Tailwind</span>
         </div>
-      </article>
-
-      <article class="project reveal">
-        <h3>Offset discovery tooling</h3>
-        <p>
-          A pattern-free, ground-truth-anchored memory offset finder built on <code>ctypes</code>.
-          Derives offsets from known-good values rather than brittle byte signatures, and validates
-          each run against a reference set before publishing results.
-        </p>
-        <div class="tags">
-          <span class="tag">Python</span><span class="tag">ctypes</span><span class="tag">Win32</span>
-        </div>
+        <a class="project-link" href="https://github.com/louie1214/engworks">github.com/louie1214/engworks &rarr;</a>
       </article>
 
       <article class="project reveal">
         <h3>This site</h3>
         <p>
           Hand-written static site &mdash; no framework, no build step, no dependencies. One
-          stylesheet, one small script, deployed straight from the repo to GitHub Pages.
+          stylesheet, one small script, deployed straight from the repo to GitHub Pages. Light and
+          dark themes come from a single token set, and the r&eacute;sum&eacute; page is styled to
+          print cleanly to PDF rather than shipping a separate document to keep in sync.
         </p>
         <div class="tags">
           <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">GitHub Pages</span>

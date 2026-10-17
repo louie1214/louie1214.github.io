@@ -33,10 +33,10 @@ python -m http.server 8000
 
 ## Publishing to GitHub Pages
 
-This is a **user site**, so the repo must be named exactly `louie1214.github.io`:
+The remote is already set to `https://github.com/louie1214/louie1214.github.io.git` — a **user
+site**, so the repo name must stay exactly that.
 
 ```bash
-git remote add origin https://github.com/louie1214/louie1214.github.io.git
 git push -u origin main
 ```
 
@@ -61,5 +61,5 @@ branch `main`, folder `/ (root)`. First publish takes a minute or two.
 - [ ] Add a LinkedIn URL — placeholder comment is in the hero `.cta-row` in `index.html`
 - [ ] Swap the `LM` monogram favicon for a real one if you want something less generic
 - [ ] Add a photo to the hero (optional — `assets/img/` exists for it)
-- [ ] Projects section is seeded from side work; add repo links once those are public
+- [ ] Ansible Flex is the featured project — refresh its capability list as the app grows
 - [ ] Phone number is intentionally **not** on the site — add it to `resume.html` if you want it public
